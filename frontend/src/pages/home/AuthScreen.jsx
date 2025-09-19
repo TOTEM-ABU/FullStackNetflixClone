@@ -64,7 +64,7 @@ const AuthScreen = () => {
                 <div className='flex max-w-6xl mx-auto items-center justify-center md:flex-row flex-col-reverse px-4 md:px-2'>
                     <div className='flex-1 relative'>
                         <div className='relative'>
-                            <img src='/stranger-things-lg.png' alt='Stranger Things img' className='mt-4' />
+                            <img src='/stranger-things-lg.jpg' alt='Stranger Things img' className='mt-4' />
 
                             <div
                                 className='flex items-center gap-2 absolute bottom-5 left-1/2 -translate-x-1/2 bg-black
