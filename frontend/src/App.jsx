@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from 'react-router'
-import { HomePage, LoginPage, SignUpPage } from './pages'
+import { HomePage, LoginPage, SignUpPage, WatchPage } from './pages'
 import { Footer } from './components'
 import { Toaster } from 'react-hot-toast'
 import { useAuthStore } from './store/authUser.js'
@@ -28,6 +28,7 @@ const App = () => {
         <Route path='/' element={<HomePage />} />
         <Route path='/login' element={!user ? <LoginPage /> : <Navigate to={'/'} />} />
         <Route path='/signup' element={!user ? <SignUpPage /> : <Navigate to={'/'} />} />
+        <Route path='/watch/:id' element={user ? <WatchPage /> : <Navigate to={'/login'} />} />
       </Routes>
       <Toaster />
       <Footer />
