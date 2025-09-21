@@ -11,6 +11,15 @@
   background-size: 1000px 100%;
 }
 
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
 @keyframes shimmer {
   0% {
     background-position: -1000px 0;
