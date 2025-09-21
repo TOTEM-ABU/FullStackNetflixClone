@@ -3,3 +3,5 @@ export { default as SignUpPage } from "./SignUpPage";
 export { default as LoginPage } from "./LoginPage";
 export { default as WatchPage } from "./WatchPage";
 export { default as SearchPage } from "./SearchPage";
+export { default as SearchHistoryPage } from "./SearchHistoryPage";
+export { default as NotFoundPage } from "./404";

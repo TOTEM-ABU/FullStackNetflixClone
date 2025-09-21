@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from 'react-router'
-import { HomePage, LoginPage, SignUpPage, WatchPage, SearchPage } from './pages'
+import { HomePage, LoginPage, SignUpPage, WatchPage, SearchPage, SearchHistoryPage, NotFoundPage } from './pages'
 import { Footer } from './components'
 import { Toaster } from 'react-hot-toast'
 import { useAuthStore } from './store/authUser.js'
@@ -30,6 +30,8 @@ const App = () => {
         <Route path='/signup' element={!user ? <SignUpPage /> : <Navigate to={'/'} />} />
         <Route path='/watch/:id' element={user ? <WatchPage /> : <Navigate to={'/login'} />} />
         <Route path='/search' element={user ? <SearchPage /> : <Navigate to={'/login'} />} />
+        <Route path='/history' element={user ? <SearchHistoryPage /> : <Navigate to={"/login"} />} />
+        <Route path='/*' element={<NotFoundPage />} />
       </Routes>
       <Toaster />
       <Footer />
